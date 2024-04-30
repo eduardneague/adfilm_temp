@@ -9,12 +9,14 @@ import { cn } from "@/utils/utils";
 import Image from "next/image";
 import { IoIosArrowDown } from "react-icons/io";
 import { otherData } from "@/utils/otherData";
+import { useWindowSize } from "@/hooks/useWindowSize";
 
 const Header = () => {
   const scrolled = useScroll(5);
   const selectedLayout = useSelectedLayoutSegment();
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const dropdown: any = useRef(null);
+  const windowSize = useWindowSize();
 
   useEffect(() => {
     // only add the event listener when the dropdown is opened
@@ -39,23 +41,36 @@ const Header = () => {
         }
       )}
     >
-      <div className="fixed z-10 w-full h-16 flex justify-between items-center px-8 pt-6 navbar gradient navbarBackground">
-        <Link href="/">
-          <Image
-            src="assets/adfilm_logo.svg"
-            width={96}
-            height={22.33}
-            className="select-none cursor-pointer"
-            alt="adfilm Logo"
-            draggable="false"
-          />
+      <div className="fixed z-10 w-full h-16 flex justify-between items-center px-8 pt-6">
+        <div className="w-full absolute top-0 right-0 bg-gradient-to-b from-black to-transparent h-[20rem] z-[1] " />
+
+        <Link href="/" className="z-[5]">
+          {windowSize.width < 1024 ? (
+            <Image
+              src="assets/adfilm_logo.svg"
+              width={96}
+              height={22.33}
+              className="select-none cursor-pointer"
+              alt="adfilm logo"
+              draggable="false"
+            />
+          ) : (
+            <Image
+              src="assets/adfilm_logo.svg"
+              width={129}
+              height={30}
+              className="select-none cursor-pointer mt-10"
+              alt="adfilm logo"
+              draggable="false"
+            />
+          )}
         </Link>
 
-        <div className="hidden lg:flex gap-6 select-none items-center">
+        <div className="hidden lg:flex gap-6 mt-10 select-none items-center z-[5]">
           <Link href="/">
             <div
               onClick={() => setIsOpen(false)}
-              className="flex justify-center items-center gap-2 py-3 px-5 transition-all hover:bg-white hover:shadow-glow  hover:shadow-white hover:text-black text-white duration-100 border-white rounded cursor-pointer border"
+              className="flex justify-center items-center gap-2 py-2 px-5 transition-all hover:bg-white hover:shadow-glow  hover:shadow-white hover:text-black text-white duration-100 border-white rounded cursor-pointer border"
             >
               <p className="font-montserrat text-md">Home</p>
             </div>
@@ -68,53 +83,39 @@ const Header = () => {
               isOpen === true
                 ? "bg-white text-black"
                 : "bg-transparent hover:bg-white hover:shadow-glow text-white hover:shadow-white hover:text-black"
-            } items-center gap-2 py-3 px-5 transition-all duration-100 border-white rounded cursor-pointer border`}
+            } items-center gap-2 py-2 px-5 transition-all duration-100 border-white rounded cursor-pointer border`}
           >
             <p className="font-montserrat text-md">Portofoliu</p>
             <IoIosArrowDown className="text-xl" />
-
-            {isOpen === true ? (
-              <>
-                <div className="absolute top-[3.8rem] cursor-default right-0 p-5 text-white rounded-lg border border-white flex flex-col gap-2 w-full">
-                  <Link href="/portofoliu/podcast">
-                    <p
-                      className="font-montserrat text-md hover:font-bold transition-all duration-75"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      Podcast
-                    </p>
-                    <div className="navMenuLine h-[1.5px] w-full bg-no-repeat mt-1" />
-                  </Link>
-
-                  <Link href="/portofoliu/foto">
-                    <p
-                      className="font-montserrat text-md hover:font-bold transition-all duration-75"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      Foto
-                    </p>
-                    <div className="navMenuLine h-[1.5px] w-full bg-no-repeat mt-1" />
-                  </Link>
-
-                  <Link href="/portofoliu/video">
-                    <p
-                      className="font-montserrat text-md hover:font-bold transition-all duration-75"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      Video
-                    </p>
-                  </Link>
-                </div>
-              </>
-            ) : (
-              <></>
-            )}
-          </div>
-          <Link href="/contact">
             <div
-              onClick={() => setIsOpen(false)}
-              className="flex justify-center items-center gap-2 py-3 px-5 transition-all hover:bg-white hover:shadow-glow  hover:shadow-white hover:text-black text-white duration-100 border-white rounded cursor-pointer border"
+              className={`absolute top-[3.5rem] ${
+                isOpen === true ? "flex" : "hidden"
+              } cursor-default right-0 p-5 text-white rounded-lg border border-white flex-col gap-2 w-full`}
             >
+              <Link href="/portofoliu/podcast">
+                <p className="font-montserrat text-md hover:font-bold transition-all duration-75">
+                  Podcast
+                </p>
+                <div className="navMenuLine h-[1.5px] w-full bg-no-repeat mt-1" />
+              </Link>
+
+              <Link href="/portofoliu/foto">
+                <p className="font-montserrat text-md hover:font-bold transition-all duration-75">
+                  Foto
+                </p>
+                <div className="navMenuLine h-[1.5px] w-full bg-no-repeat mt-1" />
+              </Link>
+
+              <Link href="/portofoliu/video">
+                <p className="font-montserrat text-md hover:font-bold transition-all duration-75">
+                  Video
+                </p>
+              </Link>
+            </div>
+          </div>
+
+          <Link href="/contact">
+            <div className="flex justify-center items-center gap-2 py-2 px-5 transition-all hover:bg-white hover:shadow-glow  hover:shadow-white hover:text-black text-white duration-100 border-white rounded cursor-pointer border">
               <p className="font-montserrat text-md">Contact</p>
             </div>
           </Link>

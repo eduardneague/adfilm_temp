@@ -13,6 +13,14 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        montserrat: ["var(--font-montserrat)"],
+        mustica: ["mustica", 'sans'],
+        "mustica-light": ["mustica-light", "sans"],
+        "mustica-semibold": ["mustica-semibold", "sans"],
+        "mustica-black": ["mustica-black", "sans"],
+        "mustica-bold": ["mustica-bold", "sans"],
+      }
     },
   },
   plugins: [],

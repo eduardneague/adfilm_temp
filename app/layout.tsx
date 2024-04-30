@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Montserrat } from "@next/font/google";
-import local from '@next/font/local'
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 
-const montserrat = Montserrat({ subsets: ["latin"], variable: '--font-montserrat' });
+const montserrat = Montserrat({ subsets: ["latin"]});
 
 export const metadata: Metadata = {
   title: "adfilm",
@@ -17,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className = {`${montserrat.variable}`}>{children}</body>
+      <body className = {montserrat.className}>{children}</body>
     </html>
   );
 }

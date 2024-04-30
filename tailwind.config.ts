@@ -20,6 +20,10 @@ const config: Config = {
         "mustica-semibold": ["mustica-semibold", "sans"],
         "mustica-black": ["mustica-black", "sans"],
         "mustica-bold": ["mustica-bold", "sans"],
+        "mustica-medium": ["mustica-medium", "sans"],
+      },
+      boxShadow: {
+        'glow': '0 0 7px 1px rgba(0, 0, 0, 0.3)',
       }
     },
   },

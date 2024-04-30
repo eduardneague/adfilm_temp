@@ -26,3 +26,44 @@
     font-family: 'mustica-black';
     src: url('./fonts/Mustica/MusticaPro-Black.otf') format('opentype');
 }
+
+@font-face {
+    font-family: 'mustica-medium';
+    src: url('./fonts/Mustica/MusticaPro-Medium.otf') format('opentype');
+}
+
+.navbarBackground {
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.mainBackground {
+    background: url('/main_page/main_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.navMenuLine {
+    background: url('/assets/navmenu_line.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.headerbuttonshover:hover {
+    background: transparent;
+    box-shadow: 0 0 0 1px inset white;
+}
+
+.phoneBackground {
+    transition: all;
+    transition-duration: 100ms;
+    -o-transition-duration: 100ms;
+    background: rgb(73,73,73);
+    background: linear-gradient(90deg, rgba(73,73,73,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.phoneBackground:hover {
+    background: rgb(68, 0, 88);
+    background: linear-gradient(90deg, rgba(68,0,88,1) 0%, rgba(255,255,255,0) 100%);
+}

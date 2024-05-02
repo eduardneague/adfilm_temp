@@ -42,7 +42,7 @@ const MainPageHeader = () => {
         >
           <Link
             href="/portofoliu/video"
-            className="py-3 px-7 bg-gray-300 text-white lg:text-black lg:bg-white lg:hover:text-white bg-opacity-40 rounded-lg flex justify-center items-center duration-400 transition-all headerbuttonshover"
+            className="py-3 px-7 bg-gray-300 text-white bg-transparent hover:bg-white lg:hover:bg-transparent hover:text-black lg:text-black lg:active:bg-adfilm-purple lg:bg-white active:bg-adfilm-purple active:shadow-adfilm-purple active:text-white active:border-adfilm-purple lg:hover:text-white bg-opacity-40 rounded-lg flex justify-center items-center duration-400 transition-all border-white border-2 hover:bg-transparent"
           >
             <p className="font-mustica-medium text-xl">Video</p>
           </Link>
@@ -54,7 +54,7 @@ const MainPageHeader = () => {
         >
           <Link
             href="/portofoliu/foto"
-            className="py-3 px-7 bg-gray-300 text-white lg:text-black lg:bg-white lg:hover:text-white bg-opacity-40 rounded-lg flex justify-center items-center duration-400 transition-all headerbuttonshover"
+            className="py-3 px-7 bg-gray-300 text-white bg-transparent hover:bg-white lg:hover:bg-transparent hover:text-black lg:text-black lg:active:bg-adfilm-purple active:bg-adfilm-purple active:shadow-adfilm-purple active:text-white active:border-adfilm-purple lg:bg-white lg:hover:text-white bg-opacity-40 rounded-lg flex justify-center items-center duration-400 transition-all border-white border-2 hover:bg-transparent"
           >
             <p className="font-mustica-medium text-xl">Foto</p>
           </Link>
@@ -66,14 +66,15 @@ const MainPageHeader = () => {
         >
           <Link
             href="/portofoliu/foto"
-            className="py-3 px-7 text-white bg-gray-300 lg:bg-white lg:text-black lg:hover:text-white bg-opacity-40 rounded-lg flex justify-center items-center duration-400 transition-all headerbuttonshover"
+            className="py-3 px-7 text-white bg-gray-300 bg-transparent hover:bg-white lg:hover:bg-transparent hover:text-black lg:bg-white lg:active:bg-adfilm-purple active:bg-adfilm-purple active:shadow-adfilm-purple active:text-white active:border-adfilm-purple lg:text-black lg:hover:text-white bg-opacity-40 rounded-lg flex justify-center items-center duration-400 transition-all border-white border-2 hover:bg-transparent"
           >
             <p className="font-mustica-medium text-xl">Podcast</p>
           </Link>
         </motion.div>
       </div>
-
       <div className="w-full absolute bottom-0 right-0 bg-gradient-to-t from-black to-transparent h-[35rem] lg:h-[41rem]" />
+      <div className="w-full absolute top-0 right-0 bg-gradient-to-b from-black to-transparent h-[35rem] lg:h-[15rem]" />
+      <div className="mouse-scroll" />
     </motion.div>
   );
 };

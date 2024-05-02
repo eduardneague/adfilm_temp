@@ -32,16 +32,82 @@
     src: url('./fonts/Mustica/MusticaPro-Medium.otf') format('opentype');
 }
 
+@media only screen and (min-width: 1024px) {
+    /* width */
+    ::-webkit-scrollbar {
+        width: 5px;
+      }
+      
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #3c443c;
+      }
+      
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: 
+        #8868c8;
+      }
+      
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #724bb9;
+      }
+}
+
+.mouse-scroll {
+    width: 2rem;
+    height: 3.37rem;
+    border: solid 2px white;
+    border-radius: 30px;
+    position: fixed;
+    bottom: 7rem;
+    right: 5rem;
+    z-index: 100;
+    display: none;
+}
+@media only screen and (min-width: 1024px) {
+    .mouse-scroll {
+        display: block;
+    }
+}
+
+
+.mouse-scroll::before {
+    content: '';
+    width: 0.2em;
+    height: .8em;
+    margin-top: .3em;
+    margin-bottom: .3em;
+    border-radius: 2px;
+    background: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scroll 1.8s infinite;
+}
+
+@keyframes scroll {
+    0% {
+        bottom: 50%;
+        opacity: 1;
+    }
+    100% {
+        bottom: 0%;
+        opacity: 0;
+    }
+}
+
 html {
-    overflow: hidden;
     scroll-behavior: smooth;
+    overflow: hidden
 }
 
 .scroll-snap-container {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    overflow-x: hidden;
     height: 100vh;
+    z-index: 1000;
 }
 
 .navbarBackground {
@@ -56,6 +122,22 @@ html {
     background-size: cover;
     height: 100vh !important;
     scroll-snap-align: start;
+}
+
+.podcastBackground {
+    background: url('/main_page/podcast_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -30rem;
+    height: 100vh !important;
+    scroll-snap-align: start;
+}
+
+@media only screen and (min-width: 900px) {
+    .podcastBackground {
+        background-position: center left 0rem;
+        background-size: cover;
+    }
 }
 
 @media only screen and (min-width: 500px) {
@@ -122,20 +204,22 @@ html {
     background-repeat: no-repeat;
 }
 
-.headerbuttonshover:hover {
-    background: transparent;
-    box-shadow: 0 0 0 1px inset white;
-}
-
 .phoneBackground {
     transition: all;
-    transition-duration: 100ms;
+    transition-duration: 200ms;
     -o-transition-duration: 100ms;
     background: rgb(73,73,73);
     background: linear-gradient(90deg, rgba(73,73,73,1) 0%, rgba(255,255,255,0) 100%);
 }
 
 .phoneBackground:hover {
-    background: rgb(68, 0, 88);
-    background: linear-gradient(90deg, rgba(68,0,88,1) 0%, rgba(255,255,255,0) 100%);
+    transition: 200ms;
+    background: #25245A;
+    background: linear-gradient(90deg, #25245A 0%, rgba(255,255,255,0) 100%);
+}
+
+.dotted-divider {
+    background: url('/assets/dotteddivider.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }

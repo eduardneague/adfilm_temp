@@ -27,7 +27,7 @@ export default function RootLayout({
     <html lang="en" className="bg-black">
       <body className={montserrat.className}>
         <NextTopLoader
-          color="#724bb9"
+          color="#8868c8"
           showSpinner={false}
           easing="ease"
           speed={100}

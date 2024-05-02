@@ -1,6 +1,7 @@
 import MainPageHeader from "@/components/MainPageHeader";
 import ServiciiVideoHeader from "@/components/ServiciiVideoHeader";
 import ServiciiFotoHeader from "@/components/ServiciiFotoHeader";
+import PodcastHeader from "@/components/PodcastHeader";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <MainPageHeader />
       <ServiciiVideoHeader />
       <ServiciiFotoHeader />
+      <PodcastHeader />
     </main>
   );
 }

@@ -36,16 +36,15 @@ const Header = () => {
     // thing here might need changing after some time actually
     <div
       className={cn(
-        `sticky inset-x-0 top-0 z-30 w-full transition-all border-b border-purple-900`,
+        `fixed inset-x-0 top-0 z-30 w-full transition-all border-b border-black`,
         {
           "border-b border-black bg-black backdrop-blur-lg": scrolled,
           "border-b border-black bg-black": selectedLayout,
         }
       )}
     >
-      <div className="fixed z-10 w-full h-16 flex justify-between items-center px-8 pt-6">
-        <div className="w-full absolute top-0 right-0 bg-gradient-to-b from-black to-transparent h-[5rem] lg:h-[20rem] z-[-1]" />
-
+      <div className="w-full absolute top-0 left-0 bg-gradient-to-b from-black to-transparent h-16 lg:hidden" />
+      <div className="fixed w-full flex justify-between items-center px-8 pt-8 h-10 ">
         <Link href="/" className="z-[5]">
           {windowSize.width < 1024 ? (
             <motion.div
@@ -87,7 +86,7 @@ const Header = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
               onClick={() => setIsOpen(false)}
-              className="flex justify-center items-center gap-2 py-2 px-5 transition-all hover:bg-white hover:shadow-glow  hover:shadow-white hover:text-black text-white duration-100 border-white rounded cursor-pointer border"
+              className="flex justify-center items-center gap-2 py-2 px-5 transition-all active:bg-adfilm-purple active:shadow-adfilm-purple active:text-white active:border-adfilm-purple hover:bg-white hover:shadow-glow  hover:shadow-white hover:text-black text-white duration-100 border-white rounded cursor-pointer border"
             >
               <p className="font-montserrat text-md">Home</p>
             </motion.div>
@@ -101,7 +100,7 @@ const Header = () => {
             ref={dropdown}
             className={`flex justify-center relative ${
               isOpen === true
-                ? "bg-white text-black"
+                ? "bg-adfilm-purple text-white shadow-adfilm-purple border-indigo-900"
                 : "bg-transparent hover:bg-white hover:shadow-glow text-white hover:shadow-white hover:text-black"
             } items-center gap-2 py-2 px-5 transition-all duration-100 border-white rounded cursor-pointer border`}
           >
@@ -139,7 +138,7 @@ const Header = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
-              className="flex justify-center items-center gap-2 py-2 px-5 transition-all hover:bg-white hover:shadow-glow  hover:shadow-white hover:text-black text-white duration-100 border-white rounded cursor-pointer border"
+              className="flex justify-center active:bg-adfilm-purple active:shadow-adfilm-purple active:text-white active:border-adfilm-purple items-center gap-2 py-2 px-5 transition-all hover:bg-white hover:shadow-glow  hover:shadow-white hover:text-black text-white duration-100 border-white rounded cursor-pointer border"
             >
               <p className="font-montserrat text-md">Contact</p>
             </motion.div>

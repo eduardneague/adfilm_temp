@@ -14,7 +14,7 @@ const ServiciiVideoHeader = () => {
         <div className="absolute hidden lg:block top-0 left-0 bg-gradient-to-b from-black opacity-100 to-transparent w-full h-[5rem] " />
         <div className="absolute hidden lg:block bottom-0 left-0 bg-gradient-to-t from-black opacity-100 to-transparent w-full h-[5rem] " />
 
-        <div className="absolute overflow-hidden lg:bottom-[5rem] lg:left-[5rem] bottom-0 left-0 w-full backdrop-blur-lg h-[20rem] z-[10] justify-start bg-black bg-opacity-70 flex-col border-t-[1.5px] border-gray-700 lg:border rounded-tr-lg lg:shadow-sm lg:shadow-purple-900 rounded-tl-lg lg:rounded-bl-lg lg:rounded-br-lg lg:w-[563px] lg:h-[253px] ">
+        <div className="absolute overflow-hidden lg:bottom-[7rem] lg:left-[5rem] bottom-0 left-0 w-full backdrop-blur-lg h-[20rem] z-[10] justify-start bg-black bg-opacity-70 flex-col border-t-[1.5px] border-gray-700 lg:border rounded-tr-lg lg:shadow-sm lg:shadow-purple-900 rounded-tl-lg lg:rounded-bl-lg lg:rounded-br-lg lg:w-[563px] lg:h-[253px] ">
           <div className="cardglowbackground absolute bottom-0 right-0 w-full h-full z-[0] flex flex-col gap-4 ">
             <h1 className="text-xl text-white font-mustica-semibold mt-8 ml-8">
               Servicii Video
@@ -27,13 +27,14 @@ const ServiciiVideoHeader = () => {
             </p>
             <Link
               href="/portofoliu/video"
-              className="bg-white ml-8 transition-all border-2 border-white hover:text-white hover:bg-transparent duration-200 cursor-pointer w-[10rem] mt-2 px-3 py-2 text-black font-mustica-semibold items-center justify-between flex rounded-lg"
+              className="bg-white ml-8 active:bg-adfilm-purple active:shadow-adfilm-purple active:text-white active:border-adfilm-purple transition-all border-2 border-white hover:text-white hover:bg-transparent duration-200 cursor-pointer w-[10rem] mt-2 px-3 py-2 text-black font-mustica-semibold items-center justify-between flex rounded-lg"
             >
               <h1>Află mai multe</h1>
               <IoIosArrowForward />
             </Link>
           </div>
         </div>
+        <div className="w-[92%] left-0 right-0 mx-auto m-auto h-[1rem] absolute bottom-[3rem] dotted-divider" />
       </div>
     </>
   );

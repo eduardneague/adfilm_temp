@@ -56,12 +56,17 @@ const HeaderMobile = () => {
     >
       {isOpen === false ? (
         <>
-          <div
+          <motion.div
+            initial={{ opacity: 0.5 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            whileInView="visible"
             className={`flex justify-center items-center gap-2 p-2 text-white border-white rounded cursor-pointer border`}
           >
             <p className="font-montserrat text-md">Meniu</p>
             <RxHamburgerMenu className="text-2xl" />
-          </div>
+          </motion.div>
         </>
       ) : (
         <>

@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Header from "@/components/Header";
 import HeaderMobile from "@/components/HeaderMobile";
+import NextTopLoader from "nextjs-toploader";
 
 const montserrat = Montserrat({
   weight: ["300", "400", "500", "700"],
@@ -25,6 +26,15 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-black">
       <body className={montserrat.className}>
+        <NextTopLoader
+          color="#724bb9"
+          showSpinner={false}
+          easing="ease"
+          speed={100}
+          crawlSpeed={200}
+          height={2}
+          showAtBottom={false}
+        />
         <Header />
         <HeaderMobile />
         {children}

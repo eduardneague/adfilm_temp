@@ -24,6 +24,14 @@ const config: Config = {
       },
       boxShadow: {
         'glow': '0 0 7px 1px rgba(0, 0, 0, 0.3)',
+      },
+      screens: {
+        '400px': '400px',
+        '3xl': '2400px',
+        '1440p': '2560px',
+        '4xl': '3000px',
+        '5xl': '3400px',
+        '4k': '3840px',
       }
     },
   },

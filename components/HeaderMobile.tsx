@@ -12,6 +12,7 @@ import { Icon } from "@iconify/react";
 import { motion, useCycle } from "framer-motion";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useScrollBlock } from "@/hooks/useScrollBlock";
+import useIntro from "@/hooks/useIntro";
 
 type MenuItemWithSubMenuProps = {
   item: SideNavItem;
@@ -57,11 +58,10 @@ const HeaderMobile = () => {
       {isOpen === false ? (
         <>
           <motion.div
-            initial={{ opacity: 0.5 }}
+            initial={{ opacity: 1 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            whileInView="visible"
             className={`flex justify-center items-center gap-2 p-2 text-white border-white rounded cursor-pointer border`}
           >
             <p className="font-montserrat text-md">Meniu</p>

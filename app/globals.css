@@ -32,6 +32,18 @@
     src: url('./fonts/Mustica/MusticaPro-Medium.otf') format('opentype');
 }
 
+html {
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.scroll-snap-container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
 .navbarBackground {
     background: rgb(0,0,0);
     background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
@@ -40,7 +52,68 @@
 .mainBackground {
     background: url('/main_page/main_bg.jpg');
     background-repeat: no-repeat;
+    background-position: center left -4rem;
     background-size: cover;
+    height: 100vh !important;
+    scroll-snap-align: start;
+}
+
+@media only screen and (min-width: 500px) {
+    .mainBackground {
+        background-position: center left 0rem;
+        background-size: cover;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .mainBackground {
+        background-position: center top 2rem;
+        background-size: cover;
+    }
+}
+
+.serviciiBackground {
+    background: url('/main_page/serviciivideo_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -100px;
+    height: 100vh !important;
+    scroll-snap-align: start;
+
+}
+
+@media only screen and (min-width: 500px) {
+    .serviciiBackground {
+        background: url('/main_page/serviciivideo_bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: default;
+    }
+}
+
+.fotoBackground {
+    background: url('/main_page/serviciifoto_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: 800px 1178px;
+    background-position: -202px 0px;
+    height: 100vh !important;
+    scroll-snap-align: start;
+
+}
+
+@media only screen and (min-width: 600px) {
+    .fotoBackground {
+        background: url('/main_page/serviciifoto_bg.jpg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+  }
+
+.cardglowbackground {
+    background: url('/assets/cardglow.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100%;
 }
 
 .navMenuLine {

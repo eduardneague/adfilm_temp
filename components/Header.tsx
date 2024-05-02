@@ -44,14 +44,14 @@ const Header = () => {
       )}
     >
       <div className="fixed z-10 w-full h-16 flex justify-between items-center px-8 pt-6">
-        <div className="w-full absolute top-0 right-0 bg-gradient-to-b from-black to-transparent h-[10rem] lg:h-[20rem] z-[1] " />
+        <div className="w-full absolute top-0 right-0 bg-gradient-to-b from-black to-transparent h-[5rem] lg:h-[20rem] z-[-1]" />
 
         <Link href="/" className="z-[5]">
           {windowSize.width < 1024 ? (
             <motion.div
-              initial={{ opacity: 0, x: -100 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, times: [0, 1] }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1 }}
             >
               <Image
                 src="assets/adfilm_logo.svg"
@@ -64,8 +64,8 @@ const Header = () => {
             </motion.div>
           ) : (
             <motion.div
-              initial={{ opacity: 0, x: -100 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
             >
               <Image

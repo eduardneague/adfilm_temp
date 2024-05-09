@@ -32,11 +32,21 @@ const config: Config = {
         '4xl': '3000px',
         '5xl': '3400px',
         '4k': '3840px',
-        '1780px': '1780px'
+        '1780px': '1780px',
+        '1851px': '1851px'
       },
       colors: {
         'adfilm-purple': '#25245A',
-      }
+      },
+      animation: {
+        'infinite-scroll': 'infinite-scroll 25s linear infinite',
+      },
+      keyframes: {
+        'infinite-scroll': {
+          from: {transform: 'translateX(0)'},
+          to: {transform: 'translateX(-100%)'}
+        }
+      },
     },
   },
   plugins: [],

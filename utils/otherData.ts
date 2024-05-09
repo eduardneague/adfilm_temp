@@ -77,3 +77,41 @@ export const videoCards: VideoCardProps[] = [
         image_src: 'main_page/podcast_placeholder.png'
     },
 ]
+
+export const alteServicii: {
+    title: string;
+}[] = [
+    {
+        title: 'Productii publicitare'
+    },
+    {
+        title: 'Livestreaming'
+    },
+    {
+        title: 'Spot-uri radio'
+    },
+    {
+        title: 'Spot-uri TV de produs'
+    },
+    {
+        title: 'Producții video digital'
+    },
+    {
+        title: 'Podcast'
+    },
+    {
+        title: 'Fotografii de produs'
+    },
+    {
+        title: 'Fotografii de tip portret'
+    },
+    {
+        title: 'Design grafic'
+    },
+    {
+        title: 'Animații 3D'
+    },
+    {
+        title: 'Copyright'
+    },
+]

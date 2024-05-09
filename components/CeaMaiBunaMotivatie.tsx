@@ -22,13 +22,13 @@ const CeaMaiBunaMotivatie = () => {
           </h1>
         )}
 
-        <div>
-          <div className="GRID-PART text-center flex flex-col lg:flex-row lg:justify-center lg:items-center lg:w-full gap-6 lg:gap-[8rem] mb-[2.5rem] xl:mb-[5rem] px-[3rem] lg:px-0 ">
-            <p className="cool-text-gradient  text-white font-mustica-semibold text-[18px] lg:text-left lg:text-[25px] xl:text-[30px] lg:w-[50%] ">
+        <div className="w-full">
+          <div className="GRID-PART text-center flex flex-col lg:flex-row lg:justify-between lg:items-center lg:w-full gap-6 lg:gap-[8rem] mb-[2.5rem] xl:mb-[5rem] px-[3rem] lg:px-0 ">
+            <p className="cool-text-gradient-noi-suntem  text-white font-mustica-semibold text-[18px] 1851px:max-w-[500px] lg:text-left lg:text-[25px] xl:text-[30px] 1851px:text-[42px] lg:w-[50%] ">
               Noi suntem pasionați de arta vizuală, dar mai ales de povestea din
               spatele fiecărei opere de artă.
             </p>
-            <p className="text-[#F2F3FA] xl:text-[14px] text-[12px] leading-[24px] font-montserrat lg:text-left lg:w-[70%] 1780px:w-[60%] mb-[3rem] lg:mb-0 ">
+            <p className="text-[#F2F3FA] xl:text-[14px] text-[12px] leading-[24px] 1851px:max-w-[500px] font-montserrat 1851px:leading-[28px]  lg:text-left lg:w-[70%] 1780px:w-[60%] mb-[3rem] lg:mb-0 ">
               Atunci când lucrăm cu oamenii, acordăm o atenție deosebită
               viziunii lor și fiecărui detaliu important pentru aceștia. Suntem
               conștienți că fiecare client este diferit și are nevoie de o
@@ -40,13 +40,13 @@ const CeaMaiBunaMotivatie = () => {
           <div className="container-divider hidden lg:block mb-[2rem] xl:mb-[5rem]" />
         </div>
 
-        <div>
-          <div className="GRID-PART text-center flex flex-col lg:flex-row lg:justify-center lg:items-center lg:w-full gap-8 lg:gap-[8rem] mb-[2.5rem] xl:mb-[5rem] px-[3rem] lg:px-0 ">
-            <p className="cool-text-gradient  text-white font-mustica-semibold text-[18px] lg:text-left lg:text-[25px] xl:text-[30px] lg:w-[50%] ">
+        <div className="w-full">
+          <div className="GRID-PART text-center flex flex-col lg:flex-row lg:justify-between w-full lg:items-center lg:w-full gap-8 lg:gap-[8rem] mb-[2.5rem] xl:mb-[5rem] px-[3rem] lg:px-0 ">
+            <p className="cool-text-gradient-apreciem  text-white font-mustica-semibold text-[18px] 1851px:max-w-[500px] lg:text-left lg:text-[25px] xl:text-[30px] 1851px:text-[42px] lg:w-[50%] ">
               Apreciem faptul că oamenii sunt unici și au perspective diverse,
               pentru că de aici pleaca și creativitatea.
             </p>
-            <p className="text-[#F2F3FA] xl:text-[14px] text-[12px] leading-[24px] font-montserrat lg:text-left lg:w-[70%] 1780px:w-[60%] mb-[3rem] lg:mb-0 ">
+            <p className="text-[#F2F3FA] xl:text-[14px] text-[12px] leading-[24px] 1851px:max-w-[500px] font-montserrat 1851px:leading-[28px] lg:text-left lg:w-[70%] 1780px:w-[60%] mb-[3rem] lg:mb-0 ">
               Suntem profesioniști, dar ce ne-a legat la începutul acestui
               proiect, atunci când nu aveam o imagine clară a ceea ce puteam
               construi, a fost entuziasmul de a face mai mult pentru pasiunea
@@ -57,13 +57,13 @@ const CeaMaiBunaMotivatie = () => {
           <div className="container-divider hidden lg:block mb-[2rem] xl:mb-[5rem]" />
         </div>
 
-        <div>
-          <div className="GRID-PART text-center flex flex-col lg:flex-row lg:justify-center lg:items-center lg:w-full gap-6 lg:gap-[8rem] mb-[2.5rem] xl:mb-[5rem] px-[3rem] lg:px-0 ">
-            <p className="cool-text-gradient  text-white font-mustica-semibold text-[18px] lg:text-left lg:text-[25px] xl:text-[30px] lg:w-[50%] ">
+        <div className="w-full">
+          <div className="GRID-PART text-center flex flex-col lg:flex-row lg:justify-between lg:items-center lg:w-full gap-6 lg:gap-[8rem] mb-[2.5rem] xl:mb-[5rem] px-[3rem] lg:px-0 ">
+            <p className="cool-text-gradient-viata  text-white font-mustica-semibold text-[18px] 1851px:max-w-[500px] lg:text-left lg:text-[25px] xl:text-[30px] 1851px:text-[42px] lg:w-[50%] ">
               Viața este numai una și merită să faci ceea ce îți place, nu-i
               așa?
             </p>
-            <p className="text-[#F2F3FA] xl:text-[14px] text-[12px] leading-[24px] font-montserrat lg:text-left lg:w-[70%] 1780px:w-[60%] mb-[3rem] lg:mb-0 ">
+            <p className="text-[#F2F3FA] xl:text-[14px] text-[12px] leading-[24px] 1851px:max-w-[500px] font-montserrat 1851px:leading-[28px]  lg:text-left lg:w-[70%] 1780px:w-[60%] mb-[3rem] lg:mb-0 ">
               Noi punem în valoare creațiile și ideile oamenilor care își doresc
               mai mult, care visează la mai mult. Suntem pregătiți să facem față
               celor mai mari provocări. Timpul nu așteaptă pe nimeni. Noi deja
@@ -74,13 +74,13 @@ const CeaMaiBunaMotivatie = () => {
 
         {windowSize.width < 1024 ? (
           // Mobile
-          <p className="cool-text-gradient-4 xl:text-[30px] mb-[2rem] xl:mb-[5rem] lg:cool-text-gradient-5 text-white font-mustica-semibold text-[18px] lg:text-[25px] lg:max-w-[40rem] xl:max-w-[50rem] lg:text-left text-center">
+          <p className="cool-text-gradient-noi-am xl:text-[30px] mb-[2rem] xl:mb-[5rem] lg:cool-text-gradient-5 text-white font-mustica-semibold text-[18px] lg:text-[25px] lg:max-w-[40rem] xl:max-w-[50rem] lg:text-left text-center">
             Noi am făcut primul pas și știm că <br /> viața începe cu adevărat
             atunci când <br /> îți urmezi visul.
           </p>
         ) : (
           // PC
-          <p className="cool-text-gradient-4 xl:text-[30px] mb-[2rem] xl:mb-[5rem] lg:cool-text-gradient-5 text-white font-mustica-semibold text-[18px] lg:text-[25px] lg:max-w-[40rem] xl:max-w-[50rem] lg:text-left text-center">
+          <p className="cool-text-gradient-noi-am xl:text-[30px] mb-[2rem] xl:mb-[5rem] 1851px:text-[42px] 1851px:max-w-[62rem] lg:cool-text-gradient-5 text-white font-mustica-semibold text-[18px] lg:text-[25px] lg:max-w-[40rem] xl:max-w-[50rem] lg:text-left text-center">
             Noi am făcut primul pas și știm că viața începe cu adevărat atunci
             când îți urmezi visul.
           </p>

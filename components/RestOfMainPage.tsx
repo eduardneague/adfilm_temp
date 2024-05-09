@@ -3,6 +3,8 @@ import LuamArta from "@/components/LuamArta";
 import CineSuntem from "@/components/CineSuntem";
 import BehindTheScenes from "@/components/BehindTheScenes";
 import CeaMaiBunaMotivatie from "@/components/CeaMaiBunaMotivatie";
+import AlteServiciiOferite from "@/components/AlteServiciiOferite";
+import ParteneriSiColaboratori from "@/components/ParteneriSiColaboratori";
 
 const RestOfMainPage = () => {
   return (
@@ -12,6 +14,8 @@ const RestOfMainPage = () => {
         <CineSuntem />
         <CeaMaiBunaMotivatie />
         <BehindTheScenes />
+        <AlteServiciiOferite />
+        <ParteneriSiColaboratori />
       </main>
     </>
   );

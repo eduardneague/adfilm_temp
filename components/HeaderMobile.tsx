@@ -12,7 +12,6 @@ import { Icon } from "@iconify/react";
 import { motion, useCycle } from "framer-motion";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useScrollBlock } from "@/hooks/useScrollBlock";
-import useIntro from "@/hooks/useIntro";
 
 type MenuItemWithSubMenuProps = {
   item: SideNavItem;

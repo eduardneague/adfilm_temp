@@ -11,6 +11,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { otherData } from "@/utils/otherData";
 import { useWindowSize } from "@/hooks/useWindowSize";
 import { motion } from "framer-motion";
+import useScrollPosition from "@/hooks/useScrollPosition";
 
 const Header = () => {
   const scrolled = useScroll(5);
@@ -18,6 +19,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const dropdown: any = useRef(null);
   const windowSize = useWindowSize();
+  const scrollPosition = useScrollPosition();
 
   useEffect(() => {
     // only add the event listener when the dropdown is opened
@@ -35,16 +37,21 @@ const Header = () => {
   return (
     // thing here might need changing after some time actually
     <div
-      className={cn(
-        `fixed inset-x-0 top-0 z-30 w-full transition-all border-b border-black`,
-        {
-          "border-b border-black bg-black backdrop-blur-lg": scrolled,
-          "border-b border-black bg-black": selectedLayout,
-        }
-      )}
+      className={cn(`fixed inset-x-0 top-0 z-30 w-full transition-all`, {
+        " bg-gradient-to-b from-black to-transparent h-[6rem]": scrolled,
+        "border-none": selectedLayout,
+      })}
     >
+      $
+      {scrollPosition > 500 ? (
+        <>
+          <div className="w-full absolute top-0 left-0 bg-gradient-to-b from-black to-transparent h-[10rem] hidden lg:show" />
+        </>
+      ) : (
+        <></>
+      )}
       <div className="w-full absolute top-0 left-0 bg-gradient-to-b from-black to-transparent h-16 lg:hidden" />
-      <div className="fixed w-full flex justify-between items-center px-8 pt-8 h-10 ">
+      <div className="fixed w-full flex justify-between items-center px-8 h-10 pt-0 lg:h-0 ">
         <Link href="/" className="z-[5]">
           {windowSize.width < 1024 ? (
             <motion.div
@@ -71,7 +78,7 @@ const Header = () => {
                 src="assets/adfilm_logo.svg"
                 width={129}
                 height={30}
-                className="select-none cursor-pointer mt-10"
+                className="select-none cursor-pointer mt-[2rem]"
                 alt="adfilm logo"
                 draggable="false"
               />
@@ -79,7 +86,7 @@ const Header = () => {
           )}
         </Link>
 
-        <div className="hidden lg:flex gap-6 mt-10 select-none items-center z-[5]">
+        <div className="hidden lg:flex gap-6 mt-[2rem] select-none items-center z-[5]">
           <Link href="/">
             <motion.div
               initial={{ opacity: 0 }}

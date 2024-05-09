@@ -20,7 +20,7 @@ const PodcastHeader = () => {
               Podcast
             </h1>
             <div className="bg-gradient-to-r from-gray-600 to-transparent bg-opacity-50 w-[60%] bg-cover bg-no-repeat h-[2px] ml-8" />
-            <p className="text-[12px] max-w-[20rem] lg:max-w-[27rem] opacity-70 text-white font-montserrat leading-5 ml-8">
+            <p className="text-[12px] max-w-[20rem] lg:max-w-[29rem] opacity-70 text-white font-montserrat leading-5 ml-8">
               Oferim servicii complete pentru a vă transforma ideile în
               producții de calitate. Cu o gamă variată de spații de înregistrare
               și echipamente de ultimă generație, suntem alegerea perfectă

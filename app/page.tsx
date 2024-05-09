@@ -15,6 +15,7 @@ export default function Home() {
         <ServiciiFotoHeader />
         <PodcastHeader />
         <RestOfMainPage />
+        <div className="mouse-scroll" />
       </main>
     </>
   );

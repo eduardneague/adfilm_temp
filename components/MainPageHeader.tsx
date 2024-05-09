@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { useWindowSize } from "@/hooks/useWindowSize";
+import useScrollPosition from "@/hooks/useScrollPosition";
 import { motion } from "framer-motion";
 
 const MainPageHeader = () => {
@@ -74,7 +75,6 @@ const MainPageHeader = () => {
       </div>
       <div className="w-full absolute bottom-0 right-0 bg-gradient-to-t from-black to-transparent h-[35rem] lg:h-[41rem]" />
       <div className="w-full absolute top-0 right-0 bg-gradient-to-b from-black to-transparent h-[35rem] lg:h-[15rem]" />
-      <div className="mouse-scroll" />
     </motion.div>
   );
 };

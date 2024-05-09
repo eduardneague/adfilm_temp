@@ -11,7 +11,6 @@ import { IoIosArrowDown } from "react-icons/io";
 import { otherData } from "@/utils/otherData";
 import { useWindowSize } from "@/hooks/useWindowSize";
 import { motion } from "framer-motion";
-import useScrollPosition from "@/hooks/useScrollPosition";
 
 const Header = () => {
   const scrolled = useScroll(5);
@@ -19,7 +18,6 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const dropdown: any = useRef(null);
   const windowSize = useWindowSize();
-  const scrollPosition = useScrollPosition();
 
   useEffect(() => {
     // only add the event listener when the dropdown is opened
@@ -33,24 +31,16 @@ const Header = () => {
     // clean up
     return () => window.removeEventListener("click", handleClick);
   }, [isOpen]);
-
   return (
     // thing here might need changing after some time actually
     <div
       className={cn(`fixed inset-x-0 top-0 z-30 w-full transition-all`, {
-        " bg-gradient-to-b from-black to-transparent h-[6rem]": scrolled,
+        "bg-gradient-to-b from-black to-transparent h-[6rem]": scrolled,
         "border-none": selectedLayout,
       })}
     >
-      $
-      {scrollPosition > 500 ? (
-        <>
-          <div className="w-full absolute top-0 left-0 bg-gradient-to-b from-black to-transparent h-[10rem] hidden lg:show" />
-        </>
-      ) : (
-        <></>
-      )}
-      <div className="w-full absolute top-0 left-0 bg-gradient-to-b from-black to-transparent h-16 lg:hidden" />
+      ${/* dont remove the $, trust me just dont. */}
+      <div className="w-full absolute top-0 left-0 bg-gradient-to-b from-black to-transparent h-16 opacity-80" />
       <div className="fixed w-full flex justify-between items-center px-8 h-10 pt-0 lg:h-0 ">
         <Link href="/" className="z-[5]">
           {windowSize.width < 1024 ? (
@@ -93,7 +83,7 @@ const Header = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
               onClick={() => setIsOpen(false)}
-              className="flex justify-center items-center gap-2 py-2 px-5 transition-all active:bg-adfilm-purple active:shadow-adfilm-purple active:text-white active:border-adfilm-purple hover:bg-white hover:shadow-glow  hover:shadow-white hover:text-black text-white duration-100 border-white rounded cursor-pointer border"
+              className="flex justify-center items-center gap-2 py-2 px-5 transition-all active:bg-adfilm-purple active:shadow-adfilm-purple active:text-white active:border-adfilm-purple hover:bg-white hover:text-black text-white duration-100 border-white rounded cursor-pointer border"
             >
               <p className="font-montserrat text-md">Home</p>
             </motion.div>
@@ -107,9 +97,9 @@ const Header = () => {
             ref={dropdown}
             className={`flex justify-center relative ${
               isOpen === true
-                ? "bg-adfilm-purple text-white shadow-adfilm-purple border-indigo-900"
-                : "bg-transparent hover:bg-white hover:shadow-glow text-white hover:shadow-white hover:text-black"
-            } items-center gap-2 py-2 px-5 transition-all duration-100 border-white rounded cursor-pointer border`}
+                ? "bg-adfilm-purple text-white shadow-adfilm-purple border-indigo-900 border"
+                : "bg-transparent hover:bg-white  text-white  hover:text-black"
+            } items-center gap-2 py-2 px-5 transition-all duration-100  rounded cursor-pointer border`}
           >
             <p className="font-montserrat text-md">Portofoliu</p>
             <IoIosArrowDown className="text-xl" />
@@ -145,7 +135,7 @@ const Header = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
-              className="flex justify-center active:bg-adfilm-purple active:shadow-adfilm-purple active:text-white active:border-adfilm-purple items-center gap-2 py-2 px-5 transition-all hover:bg-white hover:shadow-glow  hover:shadow-white hover:text-black text-white duration-100 border-white rounded cursor-pointer border"
+              className="flex justify-center active:bg-adfilm-purple active:shadow-adfilm-purple active:text-white active:border-adfilm-purple items-center gap-2 py-2 px-5 transition-all hover:bg-white hover:shadow-none  hover:text-black text-white duration-100 border-white rounded cursor-pointer border"
             >
               <p className="font-montserrat text-md">Contact</p>
             </motion.div>

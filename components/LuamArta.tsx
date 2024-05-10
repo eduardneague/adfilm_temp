@@ -8,7 +8,9 @@ const LuamArta = () => {
   const windowSize = useWindowSize();
   return (
     <>
-      <div className="flex flex-col justify-center items-center pb-[8rem]">
+      <div className="flex flex-col justify-center items-center pb-[8rem] relative">
+        <div className="absolute hidden lg:block top-0 left-0 bg-gradient-to-b from-black opacity-100 to-transparent w-full h-[5rem] " />
+
         {windowSize.width < 1024 ? (
           // Mobile
           <h1 className="font-mustica-semibold lg:text-[64px] text-[32px] text-center text-white mt-[7rem] mb-[6rem]">

@@ -29,14 +29,14 @@ const LuamArta = () => {
         {windowSize.width < 1024 ? (
           // Mobile
           <>
-            <video
-              width="300"
+            <img
+              src="/main_page/stars_1.gif"
+              alt="stars"
+              width="400"
               height="80"
-              autoPlay
-              muted
-              loop
-              src="/main_page/stars_animation.webm"
-            ></video>
+              className="select-none"
+              draggable={false}
+            />
             <p className="text-white text-center text-[16px] font-montserrat mb-[2rem] ">
               Când 5 este prea puțin, noi <br /> aducem în cadru experiența{" "}
               <br /> noastră de 6 stele.
@@ -57,14 +57,14 @@ const LuamArta = () => {
             >
               <h1>Contactează-ne acum</h1>
             </Link>
-            <video
+            <img
+              src="/main_page/stars_1.gif"
+              alt="stars"
               width="400"
               height="80"
-              autoPlay
-              muted
-              loop
-              src="/main_page/stars_animation.webm"
-            ></video>
+              className="select-none"
+              draggable={false}
+            />
             <p className="text-white text-center text-[16px] font-montserrat mb-[2rem] ">
               Când 5 este prea puțin, noi aducem în cadru
               <br /> experiența noastră de 6 stele.

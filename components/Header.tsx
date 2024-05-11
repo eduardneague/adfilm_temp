@@ -106,7 +106,7 @@ const Header = () => {
             <div
               className={`absolute top-[3.5rem] ${
                 isOpen === true ? "flex" : "hidden"
-              } cursor-default right-0 p-5 text-white rounded-lg border border-white flex-col gap-2 w-full`}
+              } cursor-default right-0 p-5 text-white rounded-lg bg-black bg-opacity-70 border border-white flex-col gap-2 w-full`}
             >
               <Link href="/portofoliu/podcast">
                 <p className="font-montserrat text-md hover:font-bold transition-all duration-75">

@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import HeaderMobile from "@/components/HeaderMobile";
 import NextTopLoader from "nextjs-toploader";
+import Footer from "@/components/Footer";
 
 const montserrat = Montserrat({
   weight: ["300", "400", "500", "700"],

@@ -5,6 +5,7 @@ import ServiciiVideoHeader from "@/components/ServiciiVideoHeader";
 import ServiciiFotoHeader from "@/components/ServiciiFotoHeader";
 import PodcastHeader from "@/components/PodcastHeader";
 import RestOfMainPage from "@/components/RestOfMainPage";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
